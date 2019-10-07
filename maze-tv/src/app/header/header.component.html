@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-2 logo text-center">
+      Maze TV
+    </div>
+    <div class="col-md-4">
+      <form class="w-100">
+        <div>
+          <input ngModel name="search" #value="ngModel" (change)="change(value)" type="text" class="w-100" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<div class="row d-flex flex-row justify-content-around" *ngIf="results">
+  <div *ngFor="let result of results" class="col-sm-4 col-lg-3 show mr-1">
+      <div *ngIf="!result.show.image" class="show-image"></div>
+      <div class="d-flex flex-column align-items-center">
+        <img *ngIf="result.show.image" src={{result.show.image.medium}} class="show-image" />
+        <span>{{result.show.name}}</span>
+      </div>
+  </div>
+</div>

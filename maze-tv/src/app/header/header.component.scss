@@ -1,0 +1,23 @@
+@import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+* {
+  box-sizing: border-box;
+}
+.show {
+  margin: 15px 0 15px 0;
+  padding: 15px;
+  text-align: center;
+  min-height: 250px;
+  border: 1px solid #bbbbbb;
+}
+
+.show-image {
+  min-height: 250px;
+  background-color: dimgrey;
+  width: 100%;
+  height: 100%;
+}
+
+.logo {
+  order: 2;
+}
